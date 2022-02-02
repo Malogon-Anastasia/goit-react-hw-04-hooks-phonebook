@@ -1,15 +1,15 @@
 import PropTypes from "prop-types";
 import { ContactButton } from "./ContactItem.styled";
 
-const ContactItem = ({ name, number, id, deleteHandler }) => (
+const ContactItem = ({ name, number, id, deleteContact }) => (
   <>
     <span>
       {name} : {number}
     </span>
     <ContactButton
-      onClick={() => deleteHandler(id)}
+      onClick={() => deleteContact(id)}
       type="button"
-      className="button"
+      
     >
       Delete
     </ContactButton>

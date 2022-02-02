@@ -1,16 +1,15 @@
 import PropTypes from "prop-types";
 import { FilterInputStyles } from "./Filter.styled";
 
-const Filter = ({ value, onChange }) => (
+const Filter = ({ value, onSearchInput }) => (
   <label>
     {" "}
     Filter contacts by name
     <FilterInputStyles
-      className="input"
       type="text"
       value={value}
       name="filter"
-      onChange={onChange}
+      onChange={onSearchInput}
     ></FilterInputStyles>
   </label>
 );
@@ -20,8 +19,8 @@ Filter.defaultProps = {
 };
 
 Filter.propTypes = {
+  onSearchInput: PropTypes.func.isRequired,
   value: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
 };
 
 export default Filter;
